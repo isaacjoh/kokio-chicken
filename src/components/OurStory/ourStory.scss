@@ -1,0 +1,36 @@
+@import "../../breakpoints";
+
+.our-story-page {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+
+    @include for-size(tablet-portrait-up) {
+      display: inline-block;
+    }
+  }
+
+  .paragraph {
+    margin-bottom: 18px;
+  }
+
+  .column {
+    display: inline-block;
+  }
+  
+  .column img {
+    width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+        
+    @include for-size(big-phone-up) {
+      width: 50%;
+    }
+  }
+}

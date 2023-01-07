@@ -1,0 +1,139 @@
+@import "../../breakpoints";
+
+.locations-page-outer {
+  background-color: #000000;
+}
+
+.locations-page {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0 110px;
+
+    @include for-size(phone-only) {
+      padding: 0 50px;
+    }
+  }
+
+  .map-locations {
+    display: flex;
+    margin-top: 30px;
+    min-height: 600px;
+    height: 70vh;
+
+    @include for-size(phone-only) {
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  .locations {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include for-size(big-phone-up) {
+      width: 400px;
+    }
+
+    @include for-size(tablet-portrait-up) {
+      width: 370px;
+    }
+  }
+
+  .location {
+    color: #ffffff;
+    cursor: pointer;
+    padding: 25px 30px;
+    background-color: rgba(211, 43, 7, 0.9);
+    border-bottom: 1px solid #000000;
+
+    &:hover {
+      background-color: rgb(211, 43, 7);
+    }
+  }
+
+  .city {
+    margin: 0;
+  }
+
+  .distance {
+    margin: 3px 0 0;
+    font-family: "Fjalla One";
+    font-size: 18px;
+  }
+
+  .phone-btn {
+    cursor: pointer;
+  }
+
+  .address {
+    margin: 20px 0 15px;
+  }
+
+  .hours {
+    margin-bottom: 0;
+  }
+
+  #map {
+    width: 100%;
+
+    @include for-size(phone-only) {
+      height: 300px;
+      max-width: 340px;
+    }
+  }
+}
+
+.infowindow-popup {
+  p {
+    font-family: "Fjalla One";
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+  }
+
+  .infowindow-btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  .infowindow-map {
+    position: relative;
+    bottom: 1px;
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .infowindow-phone {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #d3d3d3;
+    background-color: #dddddd;
+    margin-right: 5px;
+
+    img {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

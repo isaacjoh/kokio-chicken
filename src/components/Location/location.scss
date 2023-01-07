@@ -1,0 +1,98 @@
+@import "../../breakpoints";
+
+.location {
+  position: relative;
+
+  .city {
+    font-weight: normal;
+    font-size: 22px;
+  }
+
+  .distance {
+    font-size: 20px;
+  }
+
+  .hours {
+    span {
+      display: block;
+      font-family: "Fjalla One";
+      font-size: 15px;
+      letter-spacing: .1px;
+    }
+  }
+
+  .description {
+    margin-bottom: 0;
+    
+    span {
+      display: block;
+      font-family: "Fjalla One";
+      font-size: 15px;
+      letter-spacing: .1px;
+    }
+  }
+  
+  .address {
+    span {
+      display: block;
+      font-family: "Fjalla One";
+      font-size: 15px;
+      letter-spacing: .1px;
+    }
+  }
+
+  .phone-btn {
+    padding: 8px 10px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+
+    .phone-number {
+      font-family: "Fjalla One";
+      letter-spacing: .1px;
+    }
+
+    .phone-icon {
+      height: 15px;
+      margin-right: 4px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .order-online-link-btn {
+    border: 0;
+    margin-top: 12px;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-family: "Fjalla One";
+    letter-spacing: .2px;
+  }
+
+  .map-link {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+
+    @include for-size(phone-only) {
+      right: 33px;
+    }
+    
+    .map-btn {
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .map-icon {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}

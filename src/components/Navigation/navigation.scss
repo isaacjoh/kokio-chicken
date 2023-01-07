@@ -1,0 +1,105 @@
+@import "../../breakpoints";
+
+section {
+  background: #E4E4E6;
+  padding: 6rem 3rem;
+  margin: 0;
+}
+
+.line {
+  width: 50px;
+  height: 6px;
+  background: #000;
+  margin-bottom: 5px;
+}
+
+.menu {
+  width: 270px;
+  height: 100%;
+  flex-direction: column;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  right: -270px;
+  transition: right 0.1s;
+}
+
+.navigation-container {
+  &.open {
+    .menu {
+      right: 0;
+    }
+
+    .line {
+      background: #000000;
+    }
+
+    .logo {
+      @include for-size(big-phone-up) {
+        right: 17px;
+      }
+    }
+  }
+
+  &.close {
+    .menu {
+      right: -270px;
+    }
+  
+    .line {
+      background: #FFFFFF;
+    }
+  }
+
+  img {
+    width: 95px;
+    height: 85px;
+
+    @include for-size(phone-only) {
+      width: 89px;
+      height: 80px;
+    }
+  }
+}
+
+
+.logo {
+  position: absolute;
+  right: 0;
+  margin: 25px;
+  z-index: 2;
+  cursor: pointer;
+
+  @include for-size(tablet-landscape-up) {
+    margin: 45px;
+  }
+}
+
+.menu-item {
+  font-size: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  
+  &:first-child {
+    margin-top: 180px;
+
+    @include for-size(phone-only) {
+      margin-top: 150px;
+    }
+  }
+  
+  &:hover {
+    background: #000000;
+    cursor: pointer;
+
+    a {
+      color: #ffffff;
+    }
+  }
+  
+  a {
+    color: #000000;
+    padding: .8rem 3rem;
+    width: 100%;
+  }
+}

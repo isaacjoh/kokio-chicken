@@ -1,0 +1,359 @@
+@import "../../breakpoints";
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+.loading-section {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.loading-indicator {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+.home-page {
+  flex-direction: column;
+  font-family: "Fjalla One";
+}
+
+.home-page-splash {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-repeat: no-repeat; 
+  background-position: center;
+
+  .tint {
+    opacity: 0;
+
+    @include for-size(phone-only) {
+      opacity: .3 !important;
+    }
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    @include for-size(phone-only) {
+      bottom: 38px;
+    }
+
+    &:hover {
+      bottom: 22px;
+    }
+  }
+}
+
+@keyframes bounce { 
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+} 
+
+.bounce {
+  animation-name: bounce;
+  animation-delay: .5s;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.home-page-content {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 500px;
+  margin-left: 75px;
+  z-index: 1;
+
+  @include for-size(phone-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    height: 200px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .header-text {
+    text-transform: uppercase;
+    font-size: 90px;
+    color: #ffffff;
+
+    @include for-size(phone-only) {
+      font-size: 42px;
+      color: #ffffff;
+    }
+  }
+
+  .attention-text {
+    margin: 20% 0 0;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 50px;
+    width: 105%;
+    position: relative;
+    top: 24px;
+
+    @include for-size(phone-only) {
+      font-size: 26px;
+      color: #ffffff;
+      width: 100%;
+      margin: 10% 0 0;
+    }
+
+    @include for-size(tablet-portrait-up) {
+      top: 0;
+    }
+  }
+
+  .hungry-btn {
+    text-transform: uppercase;
+    width: 170px;
+    padding: 10px 15px;
+    font-size: 28px;
+    font-family: "Fjalla One";
+    cursor: pointer;
+    background-color: #000000;
+    border: 0;
+
+    &:hover {
+      opacity: .75;
+    }
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .order-online-btn {
+    margin-top: 15px;
+    text-transform: uppercase;
+    width: 210px;
+    padding: 15px 15px;
+    font-size: 28px;
+    font-family: "Fjalla One";
+    cursor: pointer;
+    background-color: #000000;
+    border: 0;
+
+    &:hover {
+      opacity: .75;
+    }
+
+    a {
+      color: #ffffff;
+    }
+  }
+}
+
+.mini-pages-container {
+  background-image: linear-gradient(to right top, #d74118, #cf401f, #c74024, #bf4029, #b7402d, #b5402e, #b4412e, #b2412f, #b6422c, #ba4229, #bd4326, #c14422);
+
+  @include for-size(phone-only) {
+    padding: 0;
+  }
+}
+
+.mini-pages-layout {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  max-height: none;
+
+  @include for-size(big-phone-up) {
+    max-height: 600px;
+  }
+  
+  @include for-size(tablet-landscape-up) {
+    max-width: 900px;
+  }
+
+  div[class^="StyledBox"] {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+
+    @include for-size(big-phone-up) {
+      flex-basis: 50%;
+    }
+  }
+
+  a {
+    width: 100%;
+    height: 50%;
+    
+    @include for-size(big-phone-up) {
+      width: 50%;
+    }
+  }
+}
+
+.tint {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.main-tint {
+  opacity: .1 !important;
+}
+
+.mini-page {
+  position: relative;
+  padding: 0;
+  background: none;
+  width: 100%;
+  max-width: 450px;
+  align-items: end;
+  margin: 0 auto;
+
+  .tint {
+    opacity: .35;
+  }
+  
+  &:hover {
+    box-shadow: none;
+
+    .tint {
+      opacity: 0;
+    }
+
+    .mini-page-label {
+      img {
+        transform: translate(3px, 0);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.mini-page-label {
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  font-size: 24px;
+  padding: 4px;
+  left: 52px;
+  bottom: 40px;
+  font-family: "Fjalla One";
+  display: flex;
+  align-items: center;
+
+  img {
+    position: relative;
+    top: -2px;
+    right: -5px;
+    transition: 0.2s ease-in-out;
+    width: 40px;
+  }
+}
+
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background iframe {
+    height: 56.25vw;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background iframe {
+    width: 177.78vh;
+  }
+}

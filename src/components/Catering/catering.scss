@@ -1,0 +1,29 @@
+@import "../../breakpoints";
+
+.catering-page {
+  width: 100%;
+  background-image: url('./catering-page-splash.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @include for-size(phone-only) {
+    background-image: url('./catering-page-splash-min.jpg');
+  }
+
+  .tint {
+    opacity: .45;
+    z-index: -1;
+  }
+
+  .full-page-layout {
+    z-index: 1;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .catering-options-container {
+    flex-wrap: wrap;
+  }
+}
