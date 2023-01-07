@@ -1,9 +1,23 @@
 import React from "react";
-import { withRouter } from "react-router"
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return <Component {...props} router={{ location, navigate, params }} />;
+  }
+
+  return ComponentWithRouterProp;
+}
 
 class ScrollTop extends React.Component {
   componentDidUpdate(prevProps) {
-    if (this.props.location.pathname !== prevProps.location.pathname) {
+    console.log(this.props);
+    if (
+      this.props.router.location.pathname !== prevProps.router.location.pathname
+    ) {
       window.scrollTo(0, 0);
     }
   }
@@ -13,4 +27,4 @@ class ScrollTop extends React.Component {
   }
 }
 
-export default withRouter(ScrollTop)
+export default withRouter(ScrollTop);
