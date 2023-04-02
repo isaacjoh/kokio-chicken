@@ -111,13 +111,13 @@ const katy = {
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=9006+S+Fry+Rd,+Katy,+TX+77494",
 };
-const seattle = {
-  name: "seattle",
-  city: "Seattle",
+const kirkland = {
+  name: "kirkland",
+  city: "Kirkland",
   address1: "147 Park Ln",
   address2: "Kirkland, WA 98033",
-  phoneNumber: "425-576-5407",
-  phoneNumberDisplay: "(425) 576-5407",
+  phoneNumber: "425-822-8049",
+  phoneNumberDisplay: "(425) 822-8049",
   description: "Coming Soon!",
   lat: 47.67621547208762,
   lng: -122.20504781487946,
@@ -133,7 +133,7 @@ const locations = [
   hawthorne,
   lubbock,
   katy,
-  seattle,
+  kirkland,
 ];
 
 const infowindows = [];
