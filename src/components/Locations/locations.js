@@ -118,7 +118,8 @@ const kirkland = {
   address2: "Kirkland, WA 98033",
   phoneNumber: "425-822-8049",
   phoneNumberDisplay: "(425) 822-8049",
-  description: "Coming Soon!",
+  hours1: "Mon-Thurs: 11AM to 2:45PM, 4PM to 10PM",
+  hours2: "Fri-Sun: 11AM to 10PM",
   lat: 47.67621547208762,
   lng: -122.20504781487946,
   mapUrl:
