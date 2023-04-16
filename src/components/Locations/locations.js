@@ -114,6 +114,7 @@ const katy = {
 const kirkland = {
   name: "kirkland",
   city: "Kirkland",
+  orderOnlineLink: "https://www.kokiochickenbistro.com",
   address1: "147 Park Ln",
   address2: "Kirkland, WA 98033",
   phoneNumber: "425-822-8049",
