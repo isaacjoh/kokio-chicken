@@ -14,7 +14,6 @@ function withRouter(Component) {
 
 class ScrollTop extends React.Component {
   componentDidUpdate(prevProps) {
-    console.log(this.props);
     if (
       this.props.router.location.pathname !== prevProps.router.location.pathname
     ) {

@@ -41,6 +41,21 @@ const losangeles = {
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=3977+W+6th+St,+Los+Angeles,+CA+90020",
 };
+const losangeles2 = {
+  name: "losangeles2",
+  city: "Los Angeles",
+  address1: "2897 W. Olympic Blvd Suite 103",
+  address2: "Los Angeles, CA 90006",
+  phoneNumber: "213-736-5060",
+  phoneNumberDisplay: "(213) 736-5060",
+  phoneNumber2: "213-736-5070",
+  phoneNumberDisplay2: "(213) 736-5070",
+  hours1: "Mon-Sun: 11AM to 9PM",
+  lat: 34.053098891238626,
+  lng: -118.29757784232986,
+  mapUrl:
+    "https://www.google.com/maps?saddr=My+Location&daddr=2897+W+Olympic+Blvd+%23103,+Los+Angeles,+CA+90006",
+};
 const downtownla = {
   name: "downtownla",
   city: "Downtown LA",
@@ -53,22 +68,6 @@ const downtownla = {
   lng: -118.252422,
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=517+E+Olympic+Blvd,+Los+Angeles,+CA+90015",
-};
-const diamondbar = {
-  name: "diamondbar",
-  city: "Diamond Bar",
-  orderOnlineLink: "https://www.diamondbarkokiochicken.com",
-  address1: "2841 S. Diamond Bar Blvd",
-  address2: "Diamond Bar, CA 91765",
-  phoneNumber: "909-869-5582",
-  phoneNumberDisplay: "(909) 869-5582",
-  hours1: "Mon-Tues: 11:30AM to 10:30PM",
-  hours2: "Wed-Sat: 11:30AM to 11:30PM",
-  hours3: "Sun: 11:30AM to 10:30PM",
-  lat: 33.97448,
-  lng: -117.837958,
-  mapUrl:
-    "https://www.google.com/maps?saddr=My+Location&daddr=2841+S+Diamond+Bar+Blvd,+Diamond+Bar,+CA+91765",
 };
 const hawthorne = {
   name: "hawthorne",
@@ -126,16 +125,31 @@ const kirkland = {
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=147+Park+Ln,+Kirkland,+WA+98033",
 };
+const albuquerque = {
+  name: "albuquerque",
+  city: "Albuquerque",
+  address1: "8019 Menual Blvd NE Suite #A",
+  address2: "Albuquerque, NM 87110",
+  phoneNumber: "505-308-3179",
+  phoneNumberDisplay: "(505) 308-3179",
+  hours1: "Mon-Sat: 11AM to 9PM",
+  hours2: "Sun: Closed",
+  lat: 35.109722262932024,
+  lng: -106.55472658650523,
+  mapUrl:
+    "https://www.google.com/maps?saddr=My+Location&daddr=8019+Menaul+Blvd+NE+a,+Albuquerque,+NM+87110",
+};
 
 const locations = [
   downtownla,
   cerritos,
   losangeles,
-  diamondbar,
+  losangeles2,
   hawthorne,
   lubbock,
   katy,
   kirkland,
+  albuquerque,
 ];
 
 const infowindows = [];
@@ -308,6 +322,8 @@ class Locations extends Component {
                   address2={location.address2}
                   phoneNumber={location.phoneNumber}
                   phoneNumberDisplay={location.phoneNumberDisplay}
+                  phoneNumber2={location.phoneNumber2}
+                  phoneNumberDisplay2={location.phoneNumberDisplay2}
                   orderOnlineLink={location.orderOnlineLink}
                   description={location.description}
                   hours1={location.hours1}

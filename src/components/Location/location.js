@@ -11,14 +11,16 @@ class Location extends Component {
       address2,
       phoneNumber,
       phoneNumberDisplay,
+      phoneNumber2,
+      phoneNumberDisplay2,
       hours1,
       hours2,
       hours3,
       hours4,
       description,
       mapUrl,
-      onClick
-    } = this.props
+      onClick,
+    } = this.props;
 
     return (
       <div className="location" onClick={onClick}>
@@ -28,40 +30,45 @@ class Location extends Component {
           <span>{address1}</span>
           <span>{address2}</span>
         </p>
-        {
-          phoneNumber && (
-            <a href={`tel:+1-${phoneNumber}`}>
-              <button className="phone-btn">
-                <span className="phone-number">
-                  {phoneNumberDisplay}
-                </span>
-              </button>
-            </a>
-          )
-        }
+        {phoneNumber ? (
+          <a href={`tel:+1-${phoneNumber}`}>
+            <button className="phone-btn">
+              <span className="phone-number">{phoneNumberDisplay}</span>
+            </button>
+          </a>
+        ) : null}
+        {phoneNumber2 ? (
+          <a href={`tel:+1-${phoneNumber2}`}>
+            <button className="phone-btn" style={{ marginTop: "4px" }}>
+              <span className="phone-number">{phoneNumberDisplay2}</span>
+            </button>
+          </a>
+        ) : null}
         <p className="hours">
           <span>{hours1}</span>
           <span>{hours2}</span>
           <span>{hours3}</span>
           <span>{hours4}</span>
         </p>
-        {
-          description && (
-            <p className="description">
-              <span>{description}</span>
-            </p>
-          )
-        }
-        {
-          orderOnlineLink && (
-            <button className="order-online-link-btn secondary">
-              <a href={orderOnlineLink} target="_blank" rel="noopener noreferrer">
-                ORDER ONLINE
-              </a>
-            </button>
-          )
-        }
-        <a className="map-link" href={mapUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+        {description ? (
+          <p className="description">
+            <span>{description}</span>
+          </p>
+        ) : null}
+        {orderOnlineLink ? (
+          <button className="order-online-link-btn secondary">
+            <a href={orderOnlineLink} target="_blank" rel="noopener noreferrer">
+              ORDER ONLINE
+            </a>
+          </button>
+        ) : null}
+        <a
+          className="map-link"
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button className="map-btn">
             <span className="map-icon">
               <img src="img/map-icon.png" alt="map" />
@@ -69,8 +76,8 @@ class Location extends Component {
           </button>
         </a>
       </div>
-    )
+    );
   }
 }
 
-export default Location
+export default Location;
