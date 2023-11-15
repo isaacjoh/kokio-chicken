@@ -128,12 +128,15 @@ const kirkland = {
 const albuquerque = {
   name: "albuquerque",
   city: "Albuquerque",
+  orderOnlineLink: "https://www.kokioabqnm.com",
   address1: "8019 Menual Blvd NE Suite #A",
   address2: "Albuquerque, NM 87110",
   phoneNumber: "505-308-3179",
   phoneNumberDisplay: "(505) 308-3179",
-  hours1: "Mon-Sat: 11AM to 9PM",
-  hours2: "Sun: Closed",
+  hours1: "Mon: Closed",
+  hours2: "Tues-Fri: 11AM to 2:30PM, 4:30PM to 8PM",
+  hours3: "Sat: 11AM to 8PM",
+  hours4: "Sun: Closed",
   lat: 35.109722262932024,
   lng: -106.55472658650523,
   mapUrl:
