@@ -44,6 +44,7 @@ const losangeles = {
 const losangeles2 = {
   name: "losangeles2",
   city: "Los Angeles",
+  orderOnlineLink: "https://kokiola.com",
   address1: "2897 W. Olympic Blvd Suite 103",
   address2: "Los Angeles, CA 90006",
   phoneNumber: "213-736-5060",
@@ -142,6 +143,17 @@ const albuquerque = {
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=8019+Menaul+Blvd+NE+a,+Albuquerque,+NM+87110",
 };
+const hyattsville = {
+  name: "hyattsville",
+  city: "Hyattsville",
+  address1: "1535 University Blvd E",
+  address2: "Hyattsville, MD 20781",
+  hours1: "New Location!",
+  lat: 38.984026104511535,
+  lng: -76.98204787393611,
+  mapUrl:
+    "https://www.google.com/maps?saddr=My+Location&daddr=1535+University+Blvd+E,+Hyattsville,+MD+20781",
+};
 
 const locations = [
   downtownla,
@@ -153,6 +165,7 @@ const locations = [
   katy,
   kirkland,
   albuquerque,
+  hyattsville,
 ];
 
 const infowindows = [];
