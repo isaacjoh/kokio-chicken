@@ -1,13 +1,15 @@
 {
-  "main.css": "/kokio-chicken/static/css/main.9f8afc6a.chunk.css",
-  "main.js": "/kokio-chicken/static/js/main.e53f3b6a.chunk.js",
-  "main.js.map": "/kokio-chicken/static/js/main.e53f3b6a.chunk.js.map",
-  "runtime~main.js": "/kokio-chicken/static/js/runtime~main.d34227a5.js",
-  "runtime~main.js.map": "/kokio-chicken/static/js/runtime~main.d34227a5.js.map",
-  "static/js/2.b0bdc205.chunk.js": "/kokio-chicken/static/js/2.b0bdc205.chunk.js",
-  "static/js/2.b0bdc205.chunk.js.map": "/kokio-chicken/static/js/2.b0bdc205.chunk.js.map",
-  "index.html": "/kokio-chicken/index.html",
-  "precache-manifest.226b72fcd3287352c6e1174007f45ebb.js": "/kokio-chicken/precache-manifest.226b72fcd3287352c6e1174007f45ebb.js",
-  "service-worker.js": "/kokio-chicken/service-worker.js",
-  "static/css/main.9f8afc6a.chunk.css.map": "/kokio-chicken/static/css/main.9f8afc6a.chunk.css.map"
+  "files": {
+    "main.css": "/static/css/main.61459635.css",
+    "main.js": "/static/js/main.bec4bc7a.js",
+    "static/media/catering-page-splash.jpg": "/static/media/catering-page-splash.893da7e82399f0104586.jpg",
+    "static/media/catering-page-splash-min.jpg": "/static/media/catering-page-splash-min.0773a7f1d1dd96f70e2c.jpg",
+    "index.html": "/index.html",
+    "main.61459635.css.map": "/static/css/main.61459635.css.map",
+    "main.bec4bc7a.js.map": "/static/js/main.bec4bc7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61459635.css",
+    "static/js/main.bec4bc7a.js"
+  ]
 }
