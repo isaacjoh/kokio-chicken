@@ -9,22 +9,6 @@ const google = window.google;
 
 let map, infoWindow;
 
-const cerritos = {
-  name: "cerritos",
-  city: "Cerritos",
-  orderOnlineLink: "https://www.kokiochickencerritos.com",
-  address1: "13337 Artesia Blvd",
-  address2: "Cerritos, CA 90703",
-  phoneNumber: "562-802-0200",
-  phoneNumberDisplay: "(562) 802-0200",
-  hours1: "Mon-Thurs: 11AM to 12AM",
-  hours2: "Fri-Sat: 11AM to 1:30AM",
-  hours3: "Sun: 11AM to 12AM",
-  lat: 33.87445,
-  lng: -118.047599,
-  mapUrl:
-    "https://www.google.com/maps?saddr=My+Location&daddr=13337+Artesia+Boulevard,+Cerritos,+CA",
-};
 const losangeles = {
   name: "losangeles",
   city: "Los Angeles",
@@ -56,19 +40,6 @@ const losangeles2 = {
   lng: -118.29757784232986,
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=2897+W+Olympic+Blvd+%23103,+Los+Angeles,+CA+90006",
-};
-const downtownla = {
-  name: "downtownla",
-  city: "Downtown LA",
-  address1: "517 E. Olympic Blvd",
-  address2: "Los Angeles, CA 90015",
-  phoneNumber: "213-623-8866",
-  phoneNumberDisplay: "(213) 623-8866",
-  hours1: "Mon-Sun: 11AM to 6PM",
-  lat: 34.037305,
-  lng: -118.252422,
-  mapUrl:
-    "https://www.google.com/maps?saddr=My+Location&daddr=517+E+Olympic+Blvd,+Los+Angeles,+CA+90015",
 };
 const hawthorne = {
   name: "hawthorne",
@@ -154,10 +125,30 @@ const hyattsville = {
   mapUrl:
     "https://www.google.com/maps?saddr=My+Location&daddr=1535+University+Blvd+E,+Hyattsville,+MD+20781",
 };
+const germantown = {
+  name: "germantown",
+  city: "Germantown",
+  address1: "13069 Wisteria Dr",
+  address2: "Germantown, MD 20874",
+  hours1: "New Location!",
+  lat: 39.17854,
+  lng: -77.27151,
+  mapUrl:
+    "https://www.google.com/maps?saddr=My+Location&daddr=13069+Wisteria+Dr,+Germantown,+MD+20874",
+};
+const centerville = {
+  name: "centerville",
+  city: "Centerville",
+  address1: "5639 Stone Rd",
+  address2: "Centerville, VA 20120",
+  hours1: "New Location!",
+  lat: 38.85332,
+  lng: -77.44977,
+  mapUrl:
+    "https://www.google.com/maps?saddr=My+Location&daddr=5639+Stone+Rd,+Centerville,+VA+20120",
+};
 
 const locations = [
-  downtownla,
-  cerritos,
   losangeles,
   losangeles2,
   hawthorne,
@@ -166,6 +157,8 @@ const locations = [
   kirkland,
   albuquerque,
   hyattsville,
+  germantown,
+  centerville,
 ];
 
 const infowindows = [];
